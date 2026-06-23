@@ -1,0 +1,3 @@
+Sensor!: 75
+Sensor2: 63
+sensor3: 82
