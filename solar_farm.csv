@@ -1,0 +1,7 @@
+panel_id,capacity_KW,generation_KWh,efficiency_percent,maintenance_due
+P1,50,45,90.0,False
+P2,50,NaN,NaN,True
+P3,55,52,94.5,False
+P4,50,NaN,NaN,False
+P5,55,NaN,NaN,False
+P6,60,58,96.7,False

@@ -1,0 +1,5 @@
+plant_id,fuel_type,capacity_MW
+P1,Coal,500
+P2,GAs,350
+P3,Nuclear,800
+P4,Coal,450

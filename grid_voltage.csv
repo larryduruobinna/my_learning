@@ -1,0 +1,5 @@
+substation_id,voltage_V,current_A,status
+G1,230,50,Active
+G2,240,65,Active
+G3,220,45,Offline
+G4,235,52,Active
