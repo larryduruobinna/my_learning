@@ -106,3 +106,33 @@ print("File saved!")
 loaded_solar = np.loadtxt("solar_farm_report.csv", delimiter=",")
 print("Loaded:", loaded_solar)
 print("Average output per panel loaded solar:", np.mean(loaded_solar, axis=1))
+
+
+national_grid = np.array([[225, 230, 228, 235, 240, 238, 222, 219, 233, 227],
+                          [210, 215, 212, 208, 214, 211, 209, 213, 216, 210],
+                          [240, 238, 242, 239, 241, 243, 237, 240, 244, 239],
+                          [195, 200, 198, 350, 202, 199, 196, 201, 197, 200],
+                          [230, 235, 233, 238, 242, 240, 236, 234, 237, 232],
+                          [220, 215, 218, 212, 216, 219, 214, 217, 221, 215]])
+print("national_grid shape:", national_grid.shape)
+print("Average voltage per region:", np.mean(national_grid, axis=1))
+print("Max national_grid:", np.max(national_grid))
+print("Min national_grid:", np.min(national_grid))
+print("stability per region:", np.std(national_grid, axis=1))
+print("Total national_grid:", np.sum(national_grid))
+print("Reading at region4 hour4:", national_grid[3, 3])
+print("Readings from region 1:", national_grid[0, :] )
+print("Hour1 readings from all regions:", national_grid[:, 0])
+print("Readings from hour3 to 7 for all regions:", national_grid[:, 2:8])
+print("Last reading of the entire data set:", national_grid[-1])
+print("Grid_wide voltage corrections:", national_grid - 5)
+print("New voltages for step up transformer:", national_grid * 0.5)
+print("National_grid reshaped:", national_grid.reshape(10, 6))
+print("National_grid reshaped2:", national_grid.reshape(4, 15))
+np.savetxt("national_grid.csv", national_grid, delimiter=",")
+print("File saved!")
+loaded_grid = np.loadtxt("national_grid.csv", delimiter=",")
+print("loaded:", loaded_grid)
+print("Max voltage per region from loaded_grid:", np.max(loaded_grid, axis=1))
+print("Average voltage per region from loaded_grid:", np.mean(loaded_grid, axis=1))
+print("Stability on loaded_grid:", np.std(loaded_grid, axis=1))
