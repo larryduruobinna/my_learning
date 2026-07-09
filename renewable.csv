@@ -1,0 +1,9 @@
+facility_id,energy_source,power_output_MW,efficiency_percent
+R1,Solar,120,85.0
+R2,Wind,250,92.0
+R3,Solar,150,87.0
+R4,Wind,300,94.0
+R5,Hydro,400,96.0
+R6,Solar,180,86.0
+R7,Wind,280,93.0
+R8,Hydro,450,97.0

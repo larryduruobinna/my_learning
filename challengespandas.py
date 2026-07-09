@@ -75,3 +75,30 @@ print(df)
 print(f"Requires maintenance! {df["needs_service"]}")
 print("High capacity, safe units!", (df["daily_output_m3"] > 3000) & (df["chlorine_adequate"] == True))
 print(f"{df["unit_id"], df["daily_output_m3"], df["needs_service"]}")
+
+
+data_set = {"plant": ["P1", "P2", "P3", "P4", "P5", "P6", "P7", "P8"],
+        "fuel_type": ["solar", "gas", "solar", "wind", "gas", "wind", "solar", "gas"],
+        "output_mw": [120, 480, 95, 210, 520, 185, 140, 455],
+        "efficiency": [0.21, 0.58, 0.19, 0.42, 0.61, 0.39, 0.22, 0.55]}
+df = pd.DataFrame(data_set)
+report = df.groupby("fuel_type").agg({"efficiency": "mean", "output_mw": "sum"})
+print(f"Dataframe: {df}")
+print(f"Groupby: {report}")
+report.to_csv("fuel_report.csv")
+df = pd.read_csv("fuel_report.csv")
+print(df)
+
+
+data_farm = {"turbine": ["WT1", "WT2", "WT3", "WT4", "WT5", "WT6", "WT7", "WT8", "WT9"],
+             "site": ["coastal", "inland", "coastal", "mountain", "inland", "coastal", "mountain", "inland", "mountain"],
+             "energy_mwh": [3200, 2100, 3450, 2800, 1950, 3300, 2650, 2250, 2900],
+             "availability": [0.97, 0.89, 0.95, 0.92, 0.85, 0.96, 0.91, 0.88, 0.93]}
+df = pd.DataFrame(data_farm)
+report = df.groupby("site").agg({"energy_mwh": "sum", "availability": "mean"})
+print(df)
+print(f"Groupby site: {report}")
+report.to_csv("site_report.csv")
+report_file = pd.read_csv("site_report.csv")
+print(f"Report_file: {report_file}")
+print(f"Original dataset: {df}")

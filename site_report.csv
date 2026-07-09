@@ -1,0 +1,4 @@
+site,energy_mwh,availability
+coastal,9950,0.96
+inland,6300,0.8733333333333334
+mountain,8350,0.92

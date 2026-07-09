@@ -1,0 +1,9 @@
+substation_id,fuel_type,capacity_MW,output_MW,efficiency_percent,maintenance_due,voltage_V
+S1,Coal,500,380,76.0,True,230
+S2,Gas,350,310,88.6,False,240
+S3,Coal,600,480,80.0,True,220
+S4,Gas,400,360,90.0,False,
+S5,Nuclear,800,760,95.0,False,235
+S6,Coal,450,360,80.0,True,225
+S7,Gas,380,320,84.2,False,
+S8,Nuclear,750,710,94.7,False,238

@@ -1,0 +1,4 @@
+fuel_type,efficiency,output_mw
+gas,0.58,1455
+solar,0.20666666666666667,355
+wind,0.405,395

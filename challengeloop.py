@@ -48,3 +48,16 @@ print(f"Voltage range: {voltage_range}V")
 print(f"Safe counts: {safe_counts}")
 print(f"Warning counts: {warning_counts}")
 print(f"Critical counts: {critical_counts}")
+
+
+
+voltage = [180, 240, 480, 220]
+current = [15, 20, 5, 10]
+
+for v in voltage:
+    print(f"Voltage: {v}")
+for i, v in enumerate(voltage):
+    print(f"voltage {i+1}: {v}V")
+for i in range(4):
+    power = voltage[i] * current[i]
+    print(f"Power {i+1}: {power}W")

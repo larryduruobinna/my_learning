@@ -75,3 +75,12 @@ inv_data = np.linalg.inv(data)
 print(inv_data)
 check = data @ inv_data
 print(check)
+
+
+# TRANSPOSE MATRIX
+
+
+a = np.array([[1, 2, 3],
+              [4, 5, 6]])
+a_T = a.T
+print(a_T)
