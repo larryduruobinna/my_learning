@@ -1,2 +1,0 @@
-voltage: 230V
-current: 15A
